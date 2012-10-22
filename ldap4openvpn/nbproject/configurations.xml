@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="ldap4openvpn" root=".">
+      <in>auth_ldap.c</in>
+      <in>config.c</in>
+      <in>config.h</in>
+      <in>lista.c</in>
+      <in>lista.h</in>
+      <in>main.c</in>
+      <in>myldap.c</in>
+      <in>myldap.h</in>
+      <in>user.c</in>
+      <in>user.h</in>
+      <in>xmalloc.c</in>
+      <in>xmalloc.h</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>/SCRATCH/openvpn/UOAopenvpn.sources/openvpn-2.0.5/</pElem>
+              <pElem>/usr/local/include</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>LDAP_DEPRECATED</Elem>
+              <Elem>MYMALLOC_DEBUG</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="auth_ldap.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="config.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="config.h" ex="true" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="myldap.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="myldap.h" ex="true" tool="3" flavor2="0">
+      </item>
+      <item path="user.c" ex="true" tool="0" flavor2="0">
+      </item>
+      <item path="user.h" ex="true" tool="3" flavor2="0">
+      </item>
+      <item path="xmalloc.c" ex="true" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

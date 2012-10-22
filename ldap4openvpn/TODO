@@ -1,0 +1,8 @@
+# TODO List For Project #
+27/02/2006
+1. memory allocation checking (oxi double free, oxi asxeta malloc, mem leaks ktl ktl).
+2. Na diorthwthei o tropos pou diabazoume to priority_rules. Eixa kanei th malakia kai perimena treia pedia. Arkei na to balw olo mesa se ena while(!EOL) loop
+3. Keeping alive to manager connection panw sto openvpn module, wste na mhn exoyne polla ldap connections.
+4. Na ftiaxtei ligaki to logging me xrhsh syslog h oxi
+
+-. CHECKING CHECKING CHECKING!
