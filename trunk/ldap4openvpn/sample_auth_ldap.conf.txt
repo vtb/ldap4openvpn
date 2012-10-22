@@ -1,0 +1,51 @@
+############################################
+#
+# Sample Configuration File for the 
+# auth/authz ldap middle Ware
+#
+############################################
+# Used in case of realm enabled auth/authz
+# but none Provided from the User
+# MUST NEVER BE EMPTY!!!!!
+default_realm: edunet.gr
+# The ldap server that will be contacted
+# Valid declarations include hostnames/IP
+# addresses or patterns containing the %s 
+# string for the realm
+# NOTE the entry must be enchanced for multiple
+# Servers Support 
+ldap_server: ldap.%r
+# The BaseDN use to construct the various ldap tree paths
+# it also can contain the %s string for "dynamic" tree 
+# creation based on the realm  
+# NOTE the entry must be enchanced for multiple baseDN supports
+base_dn: dc=edunet,dc=gr
+# The user RDN on the ldap + the branch where it resides 
+# (below base) full tree path is something like
+# ldap://ldap_server/user_dn.base_dn
+user_dn: uid=%u,ou=People
+# The (Manager) User that will be capable of retrieving 
+# authorization (profile) data from the tree
+# (below base) full tree path is something like
+# ldap://ldap_server/manager_dn.base_dn
+# NOTE in UoA logic this is actually the DAEMON USER
+# READ ONLY !!!
+# Warning if empty we SHOULD assume that the User DN
+# can ask for it self ?!
+manager_dn: uid=vpnDaemon,ou=ServicesDaemons
+#manager_dn: cn=Manager
+# The Relative password :)
+manager_passwd: Password
+# The objectClass for OpenVPN users
+#objectClass: mailRecipient
+objectClass: UoAOpenVPNUser
+# The filter used to check where a user can login to the openvpn server
+loginFilter: (&(uid=%u)(objectClass=%o)(!(openvpnDisabled=*)))
+# The Order of Significance of values defined
+# multiple times i.e. both in User and in group
+priority_rule: user| group|	role 	|OrgUnitDN
+# A map of values between ldap and the service
+# i.e. ldap and openvpn 
+attributes: uid:username
+# WARNING CURRENTLY LAST 2 VALUES MUST BE SET, THUS CHECKED
+# ACTUALLY NOT USED
